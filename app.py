@@ -3,10 +3,15 @@ from groq import Groq
 from fpdf import FPDF
 import os
 import tempfile
-from dotenv import load_dotenv
-
-load_dotenv()
-API_KEY = os.getenv("GROQ_API_KEY")
+try:
+    API_KEY = st.secrets["GROQ_API_KEY"]
+except:
+    try:
+        from dotenv import load_dotenv
+        load_dotenv()
+    except ImportError:
+        pass
+    API_KEY = os.getenv("GROQ_API_KEY")
 
 st.set_page_config(page_title="Interview Simulator", page_icon="◈", layout="wide")
 
