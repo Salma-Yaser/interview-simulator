@@ -158,15 +158,21 @@ label, .stSelectbox label, .stMultiSelect label, .stSlider label {
 }
 
 /* ── Multiselect tags ── */
-[data-testid="stMultiSelect"] span[data-baseweb="tag"] {
-    background: var(--sky-dim) !important;
+[data-testid="stMultiSelect"] span[data-baseweb="tag"],
+[data-baseweb="tag"] {
+    background: rgba(91,156,246,0.12) !important;
     border: 1px solid rgba(91,156,246,0.3) !important;
     border-radius: 6px !important;
-    color: var(--sky-light) !important;
+    color: #93bfff !important;
     font-size: 0.7rem !important;
     font-family: 'Fira Code', monospace !important;
 }
-[data-testid="stMultiSelect"] span[data-baseweb="tag"] svg { fill: var(--sky-light) !important; }
+[data-testid="stMultiSelect"] span[data-baseweb="tag"] span,
+[data-baseweb="tag"] span {
+    color: #93bfff !important;
+}
+[data-testid="stMultiSelect"] span[data-baseweb="tag"] svg,
+[data-baseweb="tag"] svg { fill: #93bfff !important; }
 
 /* ── Slider ── */
 [data-testid="stSlider"] > div > div > div > div { background: var(--sky) !important; }
