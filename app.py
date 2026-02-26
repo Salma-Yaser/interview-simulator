@@ -342,6 +342,24 @@ span[data-baseweb="tag"] svg path {
 </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+<script>
+function fixTagColors() {
+    const tags = document.querySelectorAll('[data-baseweb="tag"]');
+    tags.forEach(tag => {
+        tag.style.backgroundColor = 'rgba(91,156,246,0.12)';
+        tag.style.border = '1px solid rgba(91,156,246,0.3)';
+        tag.style.borderRadius = '6px';
+        const spans = tag.querySelectorAll('span');
+        spans.forEach(s => { s.style.color = '#93bfff'; });
+        const svgs = tag.querySelectorAll('svg');
+        svgs.forEach(s => { s.style.fill = '#93bfff'; });
+    });
+}
+setInterval(fixTagColors, 300);
+</script>
+""", unsafe_allow_html=True)
+
 
 # ══════════════════════════════════
 # FUNCTIONS
