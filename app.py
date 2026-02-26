@@ -325,6 +325,20 @@ label, .stSelectbox label, .stMultiSelect label, .stSlider label {
 
 /* ── Export row ── */
 .export-row { margin-top: 0; padding-top: 1rem; border-top: 1px solid var(--border); }
+
+/* ── FORCE tag colors ── */
+span[data-baseweb="tag"] {
+    background-color: rgba(91,156,246,0.12) !important;
+    border: 1px solid rgba(91,156,246,0.3) !important;
+    border-radius: 6px !important;
+}
+span[data-baseweb="tag"] span[data-testid="stMarkdownContainer"],
+span[data-baseweb="tag"] > span {
+    color: #93bfff !important;
+}
+span[data-baseweb="tag"] svg path {
+    fill: #93bfff !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
